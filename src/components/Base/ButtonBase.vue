@@ -1,5 +1,6 @@
 <script setup lang="ts">
 defineProps<{
+  id?: string;
   label?: string;
   type?: string;
 }>();
@@ -14,7 +15,7 @@ const onClick = () => {
 </script>
 
 <template>
-  <button class="btn" @click="onClick">{{ label }}</button>
+  <button :id="id" class="btn" @click="onClick">{{ label }}</button>
 </template>
 
 <style scoped>

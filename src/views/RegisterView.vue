@@ -20,22 +20,33 @@ const handleSubmit = () => {
     <h1>Register</h1>
 
     <form @submit.prevent="handleSubmit">
-      <InputBase label="Username" type="text" v-model="form.username" />
+      <InputBase
+        id="username"
+        label="Username"
+        type="text"
+        v-model="form.username"
+      />
 
-      <InputBase label="Email" type="email" v-model="form.email" />
-
-      <InputBase label="Password" type="password" v-model="form.password" />
+      <InputBase id="email" label="Email" type="email" v-model="form.email" />
 
       <InputBase
+        id="password"
+        label="Password"
+        type="password"
+        v-model="form.password"
+      />
+
+      <InputBase
+        id="confirmPassword"
         label="Confirm Password"
         type="password"
         v-model="form.confirmPassword"
       />
 
-      <ButtonBase label="Register" type="submit" />
+      <ButtonBase id="submit" label="Register" type="submit" />
     </form>
 
-    <pre v-if="isSubmit">{{ form }}</pre>
+    <pre id="success" v-if="isSubmit">{{ form }}</pre>
   </div>
 </template>
 <style scoped>

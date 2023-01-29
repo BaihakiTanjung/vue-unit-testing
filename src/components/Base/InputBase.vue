@@ -1,5 +1,6 @@
 <script setup lang="ts">
 defineProps<{
+  id?: string;
   label?: string;
   type?: string;
   modelValue?: string;
@@ -14,7 +15,7 @@ const updateValue = (event: any) => {
 <template>
   <div class="form-group">
     <label :for="label">{{ label }}</label>
-    <input :type="type" :id="label" :value="modelValue" @input="updateValue" />
+    <input :id="id" :type="type" :value="modelValue" @input="updateValue" />
   </div>
 </template>
 <style scoped>

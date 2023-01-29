@@ -6,7 +6,7 @@ import TheWelcome from "../components/TheWelcome.vue";
   <main>
     <h1>Vue Unit Testing</h1>
     <div>
-      <router-link to="/register">REGISTER</router-link>
+      <router-link id="register" to="/register">REGISTER</router-link>
     </div>
   </main>
 </template>
