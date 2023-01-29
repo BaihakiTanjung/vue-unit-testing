@@ -1,4 +1,3 @@
-
 <script setup lang="ts">
 import ButtonBase from "@/components/Base/ButtonBase.vue";
 import InputBase from "@/components/Base/InputBase.vue";
@@ -18,7 +17,7 @@ const handleSubmit = () => {
 </script>
 <template>
   <div class="register">
-    <h1>Unit Testing Form</h1>
+    <h1>Register</h1>
 
     <form @submit.prevent="handleSubmit">
       <InputBase label="Username" type="text" v-model="form.username" />
@@ -40,15 +39,10 @@ const handleSubmit = () => {
   </div>
 </template>
 <style scoped>
-.form-group {
-  margin-bottom: 1rem;
-}
-
-input {
-  width: 100%;
-  padding: 0.5rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: rgb(172, 169, 169);
+  text-align: center;
 }
 </style>
-
